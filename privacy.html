@@ -34,7 +34,7 @@
     <strong>한눈에 보기</strong>
     <ul>
       <li>회원가입이 없습니다. 작성한 감사 기록과 사진은 <strong>사용자 기기에만</strong> 저장되며, 개발자는 서버를 운영하지 않고 기록을 받지 않습니다.</li>
-      <li>광고(Google AdMob)를 보여 주기 위해 광고 ID·IP 주소 같은 기기 정보가 Google로 전송됩니다.</li>
+      <li>광고(Google AdMob)와 기기 등록(Firebase 클라우드 메시징)을 위해 광고 ID·IP 주소 같은 기기 정보가 Google로 전송됩니다.</li>
       <li>이용 통계(Google 애널리틱스 for Firebase)는 사용자가 허용한 경우에 전송되며(새로 설치하면 꺼져 있음, 예외는 2-2 참고), 기록의 글과 사진은 보내지 않습니다.</li>
       <li>위치·카메라·마이크·연락처 권한은 사용하지 않습니다.</li>
     </ul>
@@ -76,13 +76,18 @@
   </ul>
   <p class="muted">이 정보에는 이름·연락처처럼 사람을 직접 알아볼 수 있는 정보가 들어가지 않지만, 위의 기기 식별자와 함께 처리됩니다.</p>
 
+  <h3>2-3. 기기 등록: Firebase 클라우드 메시징 (Google LLC)</h3>
+  <p>앱이 알림 기능에 쓰는 라이브러리에 Firebase 클라우드 메시징(FCM)이 들어 있어, 앱을 실행하면 Google 서버에서 기기별 등록 토큰을 발급받을 수 있습니다.
+    이때 Firebase 설치 ID와 앱·기기 기본 정보(앱·운영체제 버전 등)가 Google로 전송되며, 이 전송은 이용 통계 설정과 관계없이 일어날 수 있습니다.
+    앱의 알림은 모두 기기 안에서 예약하며, 개발자는 이 토큰을 받지 않고 푸시 알림을 보내지 않습니다.</p>
+
   <h2>3. 내보내기(공유)</h2>
   <p>사용자가 '내보내기'를 누른 경우에만, 기록 상세 화면에서는 그 기록의 날짜와 감사한 일을, 통계 화면에서는 통계 화면 이미지를 파일로 만들어
     사용자가 고른 앱(메신저, 메일 등)으로 전달합니다. 전달된 뒤에는 받는 앱의 정책을 따르며, 앱이 만든 임시 파일은 공유 직후 지웁니다.</p>
 
   <h2>4. 앱이 사용하는 권한 (Android)</h2>
   <ul>
-    <li>알림: 사용자가 정한 시각에 작성 알림을 보냅니다. 기기 안에서 예약하는 알림이며 푸시 서버를 쓰지 않습니다.</li>
+    <li>알림: 사용자가 정한 시각에 작성 알림을 보냅니다. 기기 안에서 예약하는 알림이며, 개발자는 푸시 알림을 보내지 않습니다(2-3 참고).</li>
     <li>사진 선택: 기록에 사진을 첨부할 때만 사용합니다. Android 12 이하에서는 저장공간 읽기·쓰기 권한을 요청합니다.</li>
     <li>생체인식(지문·얼굴): 앱 잠금 해제에 사용합니다. 인증은 Android가 처리하며, 앱은 생체정보나 기기 화면 잠금(PIN·패턴·비밀번호)을 받거나 저장하지 않습니다.</li>
     <li>인터넷·네트워크 상태, 광고 ID: 광고 표시와 이용 통계 전송에 사용합니다.</li>
@@ -107,7 +112,8 @@
     <li>이전 시기와 방법: 앱을 사용하는 동안 암호화된 네트워크(HTTPS)로 전송</li>
     <li>이용 목적과 보유 기간: 2장과 5장</li>
     <li>거부 방법과 효과: 이용 통계는 [설정 › 분석 수집 허용]에서 끌 수 있고, 꺼도 앱 기능은 그대로입니다.
-      광고와 관련된 전송은 무료 앱 운영에 필요해 앱을 쓰는 동안 따로 거부할 수 없으며, 광고 ID는 Android 설정에서 재설정하거나 삭제할 수 있습니다.</li>
+      광고와 관련된 전송은 무료 앱 운영에 필요해 앱을 쓰는 동안 따로 거부할 수 없으며, 광고 ID는 Android 설정에서 재설정하거나 삭제할 수 있습니다.
+      기기 등록(2-3)은 알림 라이브러리에 포함된 동작이라 따로 끌 수 없습니다.</li>
   </ul>
 
   <h2>7. 이용자의 권리와 행사 방법</h2>
@@ -151,7 +157,7 @@
   <p>이 방침을 바꿀 때에는 시행 7일 전부터 이 페이지에 공지하고, 수집 항목을 늘리는 것처럼 이용자 권리에 중요한 변경은 30일 전부터 공지합니다.</p>
   <ul>
     <li>v1.2 (2026-11-16 시행): 실제 처리 내용에 맞게 정정했습니다. 이용 통계(Firebase) 항목을 추가하고, 앱에 없는 결제 기능과 보안 저장소 표현을 지웠으며,
-      맞춤형 광고·광고 ID 안내와 국외 이전, 권익침해 구제방법을 더했습니다. 앱이 새로 수집하는 정보는 없습니다.</li>
+      맞춤형 광고·광고 ID 안내, 기기 등록(Firebase 클라우드 메시징), 국외 이전, 권익침해 구제방법을 더했습니다. 앱이 새로 수집하는 정보는 없습니다.</li>
     <li><a href="privacy-v1.1.html">v1.1 (2025-09-10 시행)</a></li>
   </ul>
   </section>
@@ -172,7 +178,7 @@
     <strong>At a glance</strong>
     <ul>
       <li>There is no sign-up. Your gratitude entries and photos are stored <strong>only on your device</strong>. The Developer runs no server and never receives your entries.</li>
-      <li>To show ads (Google AdMob), device information such as the advertising ID and IP address is sent to Google.</li>
+      <li>For ads (Google AdMob) and device registration (Firebase Cloud Messaging), device information such as the advertising ID and IP address is sent to Google.</li>
       <li>Usage analytics (Google Analytics for Firebase) is sent only if you allow it (off for new installs; see 2-2 for the exception). The text and photos of your entries are never sent.</li>
       <li>The App does not use location, camera, microphone, or contacts permissions.</li>
     </ul>
@@ -216,13 +222,18 @@
   </ul>
   <p class="muted">This data does not include information that directly identifies you, such as your name or contact details, but it is processed together with the device identifiers above.</p>
 
+  <h3>2-3. Device registration: Firebase Cloud Messaging (Google LLC)</h3>
+  <p>The library the App uses for reminders includes Firebase Cloud Messaging (FCM), so when the App starts it may obtain a per-device registration token from Google's servers.
+    In doing so, the Firebase installation ID and basic app and device information (such as the app and OS versions) are sent to Google; this can happen regardless of the analytics setting.
+    All of the App's reminders are scheduled on the device, and the Developer neither receives this token nor sends push notifications.</p>
+
   <h2>3. Export (sharing)</h2>
   <p>Only when you tap Export does the App create a file — the date and gratitude items of that entry on the entry detail screen, or an image of the statistics screen —
     and pass it to the app you choose (a messenger, email, etc.). After that, the receiving app's policy applies. Temporary files created by the App are deleted right after sharing.</p>
 
   <h2>4. Permissions used (Android)</h2>
   <ul>
-    <li>Notifications: to send writing reminders at the times you set. They are scheduled on your device; no push server is used.</li>
+    <li>Notifications: to send writing reminders at the times you set. They are scheduled on your device, and the Developer does not send push notifications (see 2-3).</li>
     <li>Photo selection: only when you attach a photo to an entry. On Android 12 and lower, the App requests storage read and write permissions.</li>
     <li>Biometrics (fingerprint, face): to unlock the app lock. Android performs the authentication; the App never receives or stores biometric data or your screen lock (PIN, pattern, password).</li>
     <li>Internet, network state, and advertising ID: to show ads and send usage analytics.</li>
@@ -247,7 +258,8 @@
     <li>When and how: sent over an encrypted connection (HTTPS) while you use the App</li>
     <li>Purposes and retention: see sections 2 and 5</li>
     <li>How to refuse and its effect: you can turn analytics off in [Settings › Allow analytics], and the App works the same without it.
-      Ad-related transmission is needed to run the free App and cannot be refused separately while using the App; you can reset or delete your advertising ID in Android settings.</li>
+      Ad-related transmission is needed to run the free App and cannot be refused separately while using the App; you can reset or delete your advertising ID in Android settings.
+      Device registration (2-3) is part of the reminder library and cannot be turned off separately.</li>
   </ul>
 
   <h2>7. Your rights</h2>
@@ -286,7 +298,7 @@
   <p>We post changes on this page at least 7 days before they take effect, and at least 30 days before for changes that significantly affect your rights, such as collecting more data.</p>
   <ul>
     <li>Version 1.2 (effective November 16, 2026): corrected to match what the App actually does. Added usage analytics (Firebase); removed references to payments and secure storage that the App does not have;
-      added information on personalized ads, the advertising ID, international transfer, and remedies. The App collects no new data.</li>
+      added information on personalized ads, the advertising ID, device registration (Firebase Cloud Messaging), international transfer, and remedies. The App collects no new data.</li>
     <li><a href="privacy-v1.1.html">Version 1.1 (effective September 10, 2025, Korean only)</a></li>
   </ul>
   </section>
