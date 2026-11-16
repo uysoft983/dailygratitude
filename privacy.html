@@ -5,78 +5,290 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>개인정보처리방침 - 오늘의 감사</title>
   <style>
-    body { font-family: Arial, "맑은 고딕", sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-    h1, h2 { color: #222; }
-    h1 { text-align: center; margin-bottom: 40px; }
-    h2 { margin-top: 30px; border-left: 4px solid #4CAF50; padding-left: 10px; }
+    body { font-family: Arial, "맑은 고딕", sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; word-break: keep-all; overflow-wrap: break-word; }
+    h1, h2, h3 { color: #222; }
+    h1 { text-align: center; margin-bottom: 8px; }
+    h2 { margin-top: 32px; border-left: 4px solid #4CAF50; padding-left: 10px; }
+    h3 { margin-top: 20px; font-size: 1.05em; }
     p { margin: 10px 0; }
-    ul { margin: 8px 0 16px 18px; }
-    .muted { color: #666; font-size: 0.95em; }
+    ul { margin: 8px 0 16px 18px; padding-left: 4px; }
+    li { margin: 4px 0; }
+    a { color: #1B6E20; }
+    .meta { text-align: center; color: #555; margin: 0 0 8px; }
+    .lang { text-align: center; margin: 0 0 28px; }
+    .summary { background: #F1F8F1; border: 1px solid #C8E6C9; border-radius: 8px; padding: 12px 16px; margin: 20px 0; }
+    .muted { color: #555; font-size: 0.95em; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 48px 0; }
   </style>
 </head>
 <body>
+  <section id="ko" lang="ko">
   <h1>개인정보처리방침</h1>
+  <p class="meta">오늘의 감사 (Daily Gratitude) · 버전 v1.2 · 시행일 2026-11-16</p>
+  <p class="lang"><a href="#ko">한국어</a> · <a href="#en">English</a></p>
 
-  <p><strong>오늘의 감사 (Daily Gratitude)</strong>은(는) 사용자의 개인정보 보호를 최우선으로 합니다.
-    본 앱은 <strong>외부 서버와 연동하지 않고 오프라인 중심</strong>으로 동작하며, 기록 데이터는 사용자 기기에만 저장됩니다.
-    아래와 같이 개인정보 처리방침을 안내드립니다.</p>
+  <p>유와이소프트(이하 "개발자")는 「개인정보 보호법」 등 관련 법령에 따라 '오늘의 감사' 앱(이하 "앱") 이용자의 개인정보를 보호합니다.
+    이 방침은 앱이 어떤 정보를 어디에 저장하는지, 어떤 정보가 누구에게 전송되는지 설명합니다.</p>
 
-  <h2>1. 수집하는 개인정보 항목</h2>
-  <p>본 앱은 회원가입을 받지 않으며, 이름·이메일·위치 등 <strong>개인 식별 정보</strong>를 서버로 전송하거나 보관하지 않습니다.</p>
-  <p>다만 앱 기능 제공을 위해 아래 정보가 <strong>사용자 기기에만 저장</strong>될 수 있습니다.</p>
+  <div class="summary">
+    <strong>한눈에 보기</strong>
+    <ul>
+      <li>회원가입이 없습니다. 작성한 감사 기록과 사진은 <strong>사용자 기기에만</strong> 저장되며, 개발자는 서버를 운영하지 않고 기록을 받지 않습니다.</li>
+      <li>광고(Google AdMob)를 보여 주기 위해 광고 ID·IP 주소 같은 기기 정보가 Google로 전송됩니다.</li>
+      <li>이용 통계(Google 애널리틱스 for Firebase)는 사용자가 허용한 경우에 전송되며(새로 설치하면 꺼져 있음, 예외는 2-2 참고), 기록의 글과 사진은 보내지 않습니다.</li>
+      <li>위치·카메라·마이크·연락처 권한은 사용하지 않습니다.</li>
+    </ul>
+  </div>
+
+  <h2>1. 기기에만 저장되는 정보</h2>
+  <p>앱 기능을 제공하기 위해 아래 정보를 사용자 기기의 앱 전용 저장공간에 저장합니다.</p>
   <ul>
-    <li>감사 기록: 텍스트, 사진(선택), 기분, 즐겨찾기 여부 등</li>
-    <li>앱 설정값: 알림 시간, 테마, 앱 잠금(생체/비밀번호) 사용 여부 등</li>
+    <li>감사 기록: 날짜, 감사한 일(글), 기분(1~5), 즐겨찾기 여부, 첨부 사진(사진을 고르면 앱 전용 저장공간에 사본을 저장)</li>
+    <li>설정: 알림 사용 여부와 알림 시각, 앱 잠금 사용 여부, 테마, 이용 통계 허용 여부, 첫 실행 안내 완료 여부</li>
+    <li>광고 빈도 제한 정보: 전면 광고를 마지막으로 보여 준 시각과 그날 보여 준 횟수</li>
   </ul>
-  <p class="muted">※ 사진·알림·생체인증 권한은 사용자가 선택한 기능을 위해서만 사용되며, 기록은 기기 내 데이터베이스/보안저장소에만 보관됩니다.</p>
+  <p>이 정보는 다른 앱이 읽을 수 없는 앱 전용 저장공간에 보관되며 개발자나 제3자에게 전송되지 않습니다.
+    앱은 Android 자동 백업(Google 드라이브)을 사용하지 않고, 별도의 백업·복원 기능도 없습니다.</p>
 
-  <h2>2. 개인정보의 이용 목적</h2>
+  <h2>2. Google로 전송되는 정보</h2>
+  <h3>2-1. 광고: Google AdMob (Google LLC)</h3>
   <ul>
-    <li>감사 기록 작성·조회 및 캘린더/통계 기능 제공</li>
-    <li>로컬 알림 제공(작성 리마인더, 연속 기록 Streak 안내)</li>
-    <li>앱 잠금(지문/Face ID/비밀번호) 기능 제공</li>
-    <li>광고 표시</li>
+    <li>항목: 광고 ID(Android 광고 ID)와 앱 세트 ID 같은 기기 식별자, IP 주소(대략적인 위치를 추정하는 데 쓰일 수 있음), 기기·앱 정보(기기 모델, 운영체제·앱 버전, 언어 등), 앱 실행·광고 노출·클릭 같은 이용 정보, 앱과 광고 SDK의 성능 진단 정보</li>
+    <li>목적: 광고 게재와 맞춤형 광고, 광고 성과 측정, 부정 클릭 방지</li>
+    <li>맞춤형 광고 동의: 유럽경제지역(EEA)·영국·스위스처럼 법에 따라 동의가 필요한 지역에서는 Google의 동의 화면으로 동의 여부를 묻고,
+      앱의 [설정 › 정책 및 약관 › 광고 개인정보 설정]에서 언제든 바꿀 수 있습니다(이 메뉴는 동의가 필요한 지역에서만 보입니다).
+      모든 지역에서 Android 설정의 '광고' 메뉴로 광고 ID를 재설정하거나 삭제할 수 있으며, 삭제하면 광고 ID를 이용한 맞춤형 광고가 중단됩니다.</li>
   </ul>
+  <p class="muted">Google이 이 정보를 사용하는 방법:
+    <a href="https://policies.google.com/technologies/partner-sites?hl=ko" target="_blank" rel="noopener">Google 서비스를 사용하는 사이트 또는 앱의 정보를 Google이 사용하는 방법</a></p>
 
-  <h2>3. 보관 및 파기</h2>
-  <p>모든 기록 데이터는 사용자 기기에만 저장되며, 앱 삭제 시 해당 데이터는 기기에서 자동으로 파기됩니다.</p>
-
-  <h2>4. 제3자 제공 및 SDK</h2>
-  <p>본 앱은 개인정보를 제3자에게 판매하거나 제공하지 않습니다. 다만, 광고 및 결제 기능 제공을 위해 아래 SDK가 동작할 수 있으며, 이 경우
-     서비스 제공에 필요한 <strong>비식별 정보</strong>가 수집될 수 있습니다(수집 항목·처리 목적은 각 제공사의 정책을 따름).</p>
+  <h3>2-2. 이용 통계: Google 애널리틱스 for Firebase (Google LLC) — 선택</h3>
   <ul>
-    <li><strong>광고</strong>: Google AdMob – 광고 ID(AAID/IDFA), 앱 이용 정보 등 광고 성능 측정을 위한 데이터</li>
+    <li>수집 조건: 첫 실행 안내의 '익명 통계 허용' 또는 [설정 › 분석 수집 허용]을 켠 경우에 수집합니다. 새로 설치하면 꺼져 있고 언제든 끌 수 있습니다.
+      이전 버전에서 켜진 상태로 쓰던 경우에는 그 설정이 그대로 유지됩니다.</li>
+    <li>항목: 앱 인스턴스 ID·광고 ID 같은 기기 식별자, 기기·앱 정보(기기 모델, 운영체제·앱 버전, 언어), IP 주소로 추정한 대략적인 지역,
+      화면 이동과 기능 사용 이벤트(기록 작성·수정·삭제, 즐겨찾기, 사진 첨부, 알림 설정, 내보내기 등)와 그 부가 정보
+      (해당 기록의 날짜, 기분 점수(1~5), 글자 수, 사진 첨부 여부와 고른 사진의 가로·세로 크기, 알림 시각),
+      광고 노출·클릭·수익·오류 이벤트, 오류 요약(기기 안의 파일 경로는 가려서 보냄)</li>
+    <li>보내지 않는 것: 감사 기록의 글 내용, 사진 파일, 기기 안의 파일 경로</li>
+    <li>목적: 오류 파악과 앱 개선을 위한 이용 통계</li>
+    <li>예외: 새로 설치해 처음 실행할 때에는 위 설정이 적용되기 전 잠시 동안 Firebase가 '첫 실행'·'세션 시작' 같은 기본 이벤트(기기 정보 포함)를 수집할 수 있습니다.</li>
   </ul>
+  <p class="muted">이 정보에는 이름·연락처처럼 사람을 직접 알아볼 수 있는 정보가 들어가지 않지만, 위의 기기 식별자와 함께 처리됩니다.</p>
 
-  <h2>5. 이용자의 권리</h2>
+  <h2>3. 내보내기(공유)</h2>
+  <p>사용자가 '내보내기'를 누른 경우에만, 기록 상세 화면에서는 그 기록의 날짜와 감사한 일을, 통계 화면에서는 통계 화면 이미지를 파일로 만들어
+    사용자가 고른 앱(메신저, 메일 등)으로 전달합니다. 전달된 뒤에는 받는 앱의 정책을 따르며, 앱이 만든 임시 파일은 공유 직후 지웁니다.</p>
+
+  <h2>4. 앱이 사용하는 권한 (Android)</h2>
   <ul>
-    <li>앱 내에서 기록을 개별 삭제할 수 있으며, 앱 삭제 시 모든 기록은 기기에서 제거됩니다.</li>
+    <li>알림: 사용자가 정한 시각에 작성 알림을 보냅니다. 기기 안에서 예약하는 알림이며 푸시 서버를 쓰지 않습니다.</li>
+    <li>사진 선택: 기록에 사진을 첨부할 때만 사용합니다. Android 12 이하에서는 저장공간 읽기·쓰기 권한을 요청합니다.</li>
+    <li>생체인식(지문·얼굴): 앱 잠금 해제에 사용합니다. 인증은 Android가 처리하며, 앱은 생체정보나 기기 화면 잠금(PIN·패턴·비밀번호)을 받거나 저장하지 않습니다.</li>
+    <li>인터넷·네트워크 상태, 광고 ID: 광고 표시와 이용 통계 전송에 사용합니다.</li>
+    <li>진동: 알림에 사용합니다.</li>
   </ul>
+  <p>위치, 카메라, 마이크, 연락처 권한은 사용하지 않습니다.</p>
 
-  <h2>6. 개인정보 보호를 위한 기술적·관리적 조치</h2>
+  <h2>5. 보관 기간과 파기</h2>
   <ul>
-    <li>민감 정보는 보안 저장소(예: SecureStore/Keychain) 활용 등 기기 내 보호</li>
-    <li>앱 잠금(지문/Face ID/비밀번호) 제공으로 무단 접근 방지</li>
-    <li>외부 서버와의 임의 데이터 전송 금지(광고/결제 SDK의 필수 통신만 수행)</li>
+    <li>기기에 저장된 정보: 사용자가 지우거나 앱을 삭제할 때까지 기기에 보관합니다. 기록은 앱에서 하나씩 삭제할 수 있고, 앱을 삭제하면 모두 지워집니다.
+      백업 기능이 없어 앱을 삭제한 뒤에는 기록을 되살릴 수 없습니다.</li>
+    <li>Google로 전송된 정보: Google의 보관 정책에 따르며, 이용 통계는 Google 애널리틱스의 데이터 보관 기간 설정에 따라 보관된 뒤 삭제됩니다.</li>
+    <li>개발자는 별도의 서버에 개인정보를 보관하지 않습니다.</li>
   </ul>
 
-  <h2>7. 권한 사용 안내</h2>
+  <h2>6. 제3자 제공, 처리 위탁, 국외 이전</h2>
+  <p>개발자는 개인정보를 판매하거나 제3자에게 제공하지 않습니다. 2장의 정보는 광고·이용 통계 서비스를 이용하는 과정에서 Google이 처리하며, 국외로 이전됩니다.</p>
   <ul>
-    <li><strong>알림</strong>: 작성 리마인더 등 로컬 알림 제공을 위해 사용</li>
-    <li><strong>사진/미디어</strong>: 감사 기록에 사진을 첨부하는 경우에만 사용</li>
-    <li><strong>생체인증/비밀번호</strong>: 앱 잠금 해제를 위해 사용</li>
+    <li>이전받는 자: Google LLC (연락처·처리 내용: <a href="https://policies.google.com/privacy?hl=ko" target="_blank" rel="noopener">Google 개인정보처리방침</a>)</li>
+    <li>이전 국가: 미국 등 Google이 데이터 센터를 운영하는 국가</li>
+    <li>이전 항목: 2장의 정보</li>
+    <li>이전 시기와 방법: 앱을 사용하는 동안 암호화된 네트워크(HTTPS)로 전송</li>
+    <li>이용 목적과 보유 기간: 2장과 5장</li>
+    <li>거부 방법과 효과: 이용 통계는 [설정 › 분석 수집 허용]에서 끌 수 있고, 꺼도 앱 기능은 그대로입니다.
+      광고와 관련된 전송은 무료 앱 운영에 필요해 앱을 쓰는 동안 따로 거부할 수 없으며, 광고 ID는 Android 설정에서 재설정하거나 삭제할 수 있습니다.</li>
   </ul>
 
-  <h2>8. 개인정보 처리방침 변경</h2>
-  <p>법령 또는 서비스 정책 변경 시 사전 고지 후 본 방침을 수정할 수 있습니다.
-     최신 버전은 앱 내 또는 개발자 웹사이트에서 확인할 수 있습니다.</p>
+  <h2>7. 이용자의 권리와 행사 방법</h2>
+  <ul>
+    <li>이용 통계 끄기: [설정 › 분석 수집 허용]을 끕니다.</li>
+    <li>광고 개인정보 설정(동의가 필요한 지역): [설정 › 정책 및 약관 › 광고 개인정보 설정]</li>
+    <li>광고 ID 재설정·삭제: Android 설정의 '광고' 메뉴(기기마다 위치가 다르며, 설정의 검색창에 '광고'를 입력하면 찾을 수 있습니다)</li>
+    <li>기록 삭제: 앱에서 기록을 삭제하거나 앱을 삭제합니다.</li>
+    <li>개인정보 열람·정정·삭제·처리정지 요구: 아래 문의처로 요청하면 지체 없이 처리합니다. 개발자는 기기에 저장된 기록을 볼 수 없습니다.</li>
+  </ul>
 
-  <h2>9. 문의처</h2>
-  <p>
-    개발자: <strong>유와이소프트</strong><br />
-    이메일: <a href="mailto:uysoft983@gmail.com">uysoft983@gmail.com</a><br />
-    웹사이트: <a href="https://uysoft983.kr" target="_blank" rel="noopener">https://uysoft983.kr</a><br />
-    정책 버전/시행일: v1.1 / 2025-09-10
-  </p>
+  <h2>8. 아동의 개인정보</h2>
+  <p>앱은 만 14세 미만 아동을 주 대상으로 하지 않습니다.</p>
+
+  <h2>9. 안전성 확보 조치</h2>
+  <ul>
+    <li>기록은 앱 전용 저장공간에만 보관하며 Android 자동 백업을 사용하지 않습니다.</li>
+    <li>앱 잠금(기기의 생체인증 또는 화면 잠금)을 제공하며, 잠금을 켜면 최근 앱 화면의 미리보기를 가리고 스크린샷을 막습니다.</li>
+    <li>이용 통계에 기록의 글, 사진, 파일 경로를 넣지 않습니다.</li>
+    <li>내보내기용 임시 파일은 공유 직후 지웁니다.</li>
+    <li>앱의 네트워크 통신은 암호화된 연결(HTTPS)만 허용합니다.</li>
+  </ul>
+
+  <h2>10. 개인정보 보호책임자 및 문의처</h2>
+  <ul>
+    <li>개인정보 보호책임자: 유와이소프트(개발자)</li>
+    <li>이메일: <a href="mailto:uysoft983@gmail.com">uysoft983@gmail.com</a></li>
+    <li>웹사이트: <a href="https://uysoft983.kr" target="_blank" rel="noopener">https://uysoft983.kr</a></li>
+  </ul>
+
+  <h2>11. 권익침해 구제방법</h2>
+  <p>개인정보 침해에 관한 상담이나 구제가 필요하면 아래 기관에 문의할 수 있습니다.</p>
+  <ul>
+    <li>개인정보분쟁조정위원회: (국번 없이) 1833-6972, <a href="https://www.kopico.go.kr" target="_blank" rel="noopener">www.kopico.go.kr</a></li>
+    <li>개인정보침해신고센터: (국번 없이) 118, <a href="https://privacy.kisa.or.kr" target="_blank" rel="noopener">privacy.kisa.or.kr</a></li>
+    <li>대검찰청: (국번 없이) 1301, <a href="https://www.spo.go.kr" target="_blank" rel="noopener">www.spo.go.kr</a></li>
+    <li>경찰청: (국번 없이) 182, <a href="https://ecrm.police.go.kr" target="_blank" rel="noopener">ecrm.police.go.kr</a></li>
+  </ul>
+
+  <h2>12. 처리방침의 변경</h2>
+  <p>이 방침을 바꿀 때에는 시행 7일 전부터 이 페이지에 공지하고, 수집 항목을 늘리는 것처럼 이용자 권리에 중요한 변경은 30일 전부터 공지합니다.</p>
+  <ul>
+    <li>v1.2 (2026-11-16 시행): 실제 처리 내용에 맞게 정정했습니다. 이용 통계(Firebase) 항목을 추가하고, 앱에 없는 결제 기능과 보안 저장소 표현을 지웠으며,
+      맞춤형 광고·광고 ID 안내와 국외 이전, 권익침해 구제방법을 더했습니다. 앱이 새로 수집하는 정보는 없습니다.</li>
+    <li><a href="privacy-v1.1.html">v1.1 (2025-09-10 시행)</a></li>
+  </ul>
+  </section>
+
+  <hr />
+
+  <section id="en" lang="en">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Daily Gratitude · Version 1.2 · Effective November 16, 2026</p>
+  <p class="lang"><a href="#ko">한국어</a> · <a href="#en">English</a></p>
+  <p class="muted">This English version is a translation for convenience. If it differs from the Korean version, the Korean version prevails.</p>
+
+  <p>유와이소프트 (the "Developer") protects the personal information of users of the Daily Gratitude app (the "App") in accordance with the
+    Personal Information Protection Act of Korea and other applicable laws. This policy explains what the App stores, where it stores it,
+    and what information is sent to whom.</p>
+
+  <div class="summary">
+    <strong>At a glance</strong>
+    <ul>
+      <li>There is no sign-up. Your gratitude entries and photos are stored <strong>only on your device</strong>. The Developer runs no server and never receives your entries.</li>
+      <li>To show ads (Google AdMob), device information such as the advertising ID and IP address is sent to Google.</li>
+      <li>Usage analytics (Google Analytics for Firebase) is sent only if you allow it (off for new installs; see 2-2 for the exception). The text and photos of your entries are never sent.</li>
+      <li>The App does not use location, camera, microphone, or contacts permissions.</li>
+    </ul>
+  </div>
+
+  <h2>1. Information stored only on your device</h2>
+  <p>To provide its features, the App stores the following in its private storage on your device.</p>
+  <ul>
+    <li>Entries: date, the things you are grateful for (text), mood (1–5), favorite status, and attached photos (a copy is saved to the App's private storage when you pick a photo)</li>
+    <li>Settings: whether reminders are on and their times, whether app lock is on, theme, whether analytics is allowed, and whether onboarding is complete</li>
+    <li>Ad frequency data: when a full-screen ad was last shown and how many were shown that day</li>
+  </ul>
+  <p>This information is kept in private storage that other apps cannot read, and it is not sent to the Developer or any third party.
+    The App does not use Android Auto Backup (Google Drive) and has no backup or restore feature.</p>
+
+  <h2>2. Information sent to Google</h2>
+  <h3>2-1. Ads: Google AdMob (Google LLC)</h3>
+  <ul>
+    <li>Data: device identifiers such as the advertising ID (Android advertising ID) and app set ID; IP address (may be used to estimate approximate location);
+      device and app information (device model, OS and app version, language, etc.); usage information such as app launches, ad impressions, and clicks;
+      and diagnostic information about the performance of the App and the ads SDK</li>
+    <li>Purposes: serving and personalizing ads, measuring ad performance, and preventing invalid clicks</li>
+    <li>Consent for personalized ads: where the law requires consent, such as the EEA, the UK, and Switzerland, Google's consent screen asks for your choice,
+      and you can change it at any time in [Settings › Policy &amp; Terms › Ad privacy settings] (this item appears only where consent is required).
+      In every region you can reset or delete your advertising ID in the Ads menu of Android settings; deleting it stops ads personalized with the advertising ID.</li>
+  </ul>
+  <p class="muted">How Google uses this information:
+    <a href="https://policies.google.com/technologies/partner-sites?hl=en" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a></p>
+
+  <h3>2-2. Usage analytics: Google Analytics for Firebase (Google LLC) — optional</h3>
+  <ul>
+    <li>When: collected only if you turn on "Allow anonymous analytics" during onboarding or [Settings › Allow analytics]. It is off for new installs and you can turn it off at any time.
+      If it was on in an earlier version of the App, that setting is kept.</li>
+    <li>Data: device identifiers such as the app instance ID and advertising ID; device and app information (device model, OS and app version, language);
+      approximate region estimated from the IP address; screen views and feature-use events (creating, editing, or deleting an entry, favorites, attaching photos,
+      reminder settings, exporting, etc.) with related details (the entry's date, mood score (1–5), character count, whether a photo is attached and the width and height of the picked photo, reminder time);
+      ad impression, click, revenue, and error events; and error summaries (file paths on the device are masked)</li>
+    <li>Never sent: the text of your entries, photo files, and file paths on the device</li>
+    <li>Purpose: usage statistics for finding errors and improving the App</li>
+    <li>Exception: on the very first launch after a new install, Firebase may collect basic events such as "first open" and "session start" (including device information) for a short time before the setting above takes effect.</li>
+  </ul>
+  <p class="muted">This data does not include information that directly identifies you, such as your name or contact details, but it is processed together with the device identifiers above.</p>
+
+  <h2>3. Export (sharing)</h2>
+  <p>Only when you tap Export does the App create a file — the date and gratitude items of that entry on the entry detail screen, or an image of the statistics screen —
+    and pass it to the app you choose (a messenger, email, etc.). After that, the receiving app's policy applies. Temporary files created by the App are deleted right after sharing.</p>
+
+  <h2>4. Permissions used (Android)</h2>
+  <ul>
+    <li>Notifications: to send writing reminders at the times you set. They are scheduled on your device; no push server is used.</li>
+    <li>Photo selection: only when you attach a photo to an entry. On Android 12 and lower, the App requests storage read and write permissions.</li>
+    <li>Biometrics (fingerprint, face): to unlock the app lock. Android performs the authentication; the App never receives or stores biometric data or your screen lock (PIN, pattern, password).</li>
+    <li>Internet, network state, and advertising ID: to show ads and send usage analytics.</li>
+    <li>Vibration: for notifications.</li>
+  </ul>
+  <p>The App does not use location, camera, microphone, or contacts permissions.</p>
+
+  <h2>5. Retention and deletion</h2>
+  <ul>
+    <li>Information on your device: kept until you delete it or uninstall the App. You can delete entries one by one in the App, and uninstalling removes everything.
+      Because there is no backup feature, entries cannot be recovered after you uninstall the App.</li>
+    <li>Information sent to Google: retained under Google's retention policies; analytics data is deleted after the retention period set in Google Analytics.</li>
+    <li>The Developer does not keep personal information on any server of its own.</li>
+  </ul>
+
+  <h2>6. Sharing, processing, and international transfer</h2>
+  <p>The Developer does not sell personal information or provide it to third parties. The information in section 2 is processed by Google as part of the ads and analytics services, and it is transferred outside Korea.</p>
+  <ul>
+    <li>Recipient: Google LLC (contact and details: <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
+    <li>Countries: the United States and other countries where Google operates data centers</li>
+    <li>Data: the information in section 2</li>
+    <li>When and how: sent over an encrypted connection (HTTPS) while you use the App</li>
+    <li>Purposes and retention: see sections 2 and 5</li>
+    <li>How to refuse and its effect: you can turn analytics off in [Settings › Allow analytics], and the App works the same without it.
+      Ad-related transmission is needed to run the free App and cannot be refused separately while using the App; you can reset or delete your advertising ID in Android settings.</li>
+  </ul>
+
+  <h2>7. Your rights</h2>
+  <ul>
+    <li>Turn off analytics: switch off [Settings › Allow analytics].</li>
+    <li>Ad privacy settings (where consent is required): [Settings › Policy &amp; Terms › Ad privacy settings]</li>
+    <li>Reset or delete the advertising ID: the Ads menu in Android settings (its location varies by device; search for "Ads" in Settings)</li>
+    <li>Delete entries: delete them in the App or uninstall the App.</li>
+    <li>Requests to access, correct, delete, or stop processing personal information: contact us below and we will act without delay. The Developer cannot see the entries stored on your device.</li>
+  </ul>
+
+  <h2>8. Children</h2>
+  <p>The App is not primarily directed at children under 14.</p>
+
+  <h2>9. Security measures</h2>
+  <ul>
+    <li>Entries are kept only in the App's private storage, and Android Auto Backup is not used.</li>
+    <li>The App offers an app lock (device biometrics or screen lock). When it is on, the App hides its preview in recent apps and blocks screenshots.</li>
+    <li>Usage analytics never includes the text of entries, photos, or file paths.</li>
+    <li>Temporary export files are deleted right after sharing.</li>
+    <li>The App allows network communication only over encrypted connections (HTTPS).</li>
+  </ul>
+
+  <h2>10. Privacy officer and contact</h2>
+  <ul>
+    <li>Privacy officer: 유와이소프트 (the Developer)</li>
+    <li>Email: <a href="mailto:uysoft983@gmail.com">uysoft983@gmail.com</a></li>
+    <li>Website: <a href="https://uysoft983.kr" target="_blank" rel="noopener">https://uysoft983.kr</a></li>
+  </ul>
+
+  <h2>11. Remedies</h2>
+  <p>For advice or remedies regarding a privacy infringement, you can also contact the Korean authorities listed in section 11 of the Korean version
+    (Personal Information Dispute Mediation Committee, Personal Information Infringement Report Center, Supreme Prosecutors' Office, and Korean National Police Agency).</p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>We post changes on this page at least 7 days before they take effect, and at least 30 days before for changes that significantly affect your rights, such as collecting more data.</p>
+  <ul>
+    <li>Version 1.2 (effective November 16, 2026): corrected to match what the App actually does. Added usage analytics (Firebase); removed references to payments and secure storage that the App does not have;
+      added information on personalized ads, the advertising ID, international transfer, and remedies. The App collects no new data.</li>
+    <li><a href="privacy-v1.1.html">Version 1.1 (effective September 10, 2025, Korean only)</a></li>
+  </ul>
+  </section>
 </body>
 </html>
